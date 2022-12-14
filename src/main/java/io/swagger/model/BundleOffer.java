@@ -3,8 +3,8 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.Chargeoffers;
-import io.swagger.model.Discountoffers;
+import io.swagger.model.ChargeOffers;
+import io.swagger.model.DiscountOffers;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +30,13 @@ public class BundleOffer   {
   @JsonProperty("packageId")
   private String packageId = null;
 
-  @JsonProperty("chargeoffers")
+  @JsonProperty("ChargeOffers")
   @Valid
-  private List<Chargeoffers> chargeoffers = null;
+  private List<ChargeOffers> ChargeOffers = null;
 
-  @JsonProperty("discountoffers")
+  @JsonProperty("DiscountOffers")
   @Valid
-  private List<Discountoffers> discountoffers = null;
+  private List<DiscountOffers> DiscountOffers = null;
 
   public BundleOffer bundleId(String bundleId) {
     this.bundleId = bundleId;
@@ -95,58 +95,58 @@ public class BundleOffer   {
     this.packageId = packageId;
   }
 
-  public BundleOffer chargeoffers(List<Chargeoffers> chargeoffers) {
-    this.chargeoffers = chargeoffers;
+  public BundleOffer ChargeOffers(List<ChargeOffers> ChargeOffers) {
+    this.ChargeOffers = ChargeOffers;
     return this;
   }
 
-  public BundleOffer addChargeoffersItem(Chargeoffers chargeoffersItem) {
-    if (this.chargeoffers == null) {
-      this.chargeoffers = new ArrayList<Chargeoffers>();
+  public BundleOffer addChargeOffersItem(ChargeOffers ChargeOffersItem) {
+    if (this.ChargeOffers == null) {
+      this.ChargeOffers = new ArrayList<ChargeOffers>();
     }
-    this.chargeoffers.add(chargeoffersItem);
+    this.ChargeOffers.add(ChargeOffersItem);
     return this;
   }
 
   /**
    * A list of charge offers.
-   * @return chargeoffers
+   * @return ChargeOffers
    **/
   @Schema(description = "A list of charge offers.")
       @Valid
-    public List<Chargeoffers> getChargeoffers() {
-    return chargeoffers;
+    public List<ChargeOffers> getChargeOffers() {
+    return ChargeOffers;
   }
 
-  public void setChargeoffers(List<Chargeoffers> chargeoffers) {
-    this.chargeoffers = chargeoffers;
+  public void setChargeOffers(List<ChargeOffers> ChargeOffers) {
+    this.ChargeOffers = ChargeOffers;
   }
 
-  public BundleOffer discountoffers(List<Discountoffers> discountoffers) {
-    this.discountoffers = discountoffers;
+  public BundleOffer DiscountOffers(List<DiscountOffers> DiscountOffers) {
+    this.DiscountOffers = DiscountOffers;
     return this;
   }
 
-  public BundleOffer addDiscountoffersItem(Discountoffers discountoffersItem) {
-    if (this.discountoffers == null) {
-      this.discountoffers = new ArrayList<Discountoffers>();
+  public BundleOffer addDiscountOffersItem(DiscountOffers DiscountOffersItem) {
+    if (this.DiscountOffers == null) {
+      this.DiscountOffers = new ArrayList<DiscountOffers>();
     }
-    this.discountoffers.add(discountoffersItem);
+    this.DiscountOffers.add(DiscountOffersItem);
     return this;
   }
 
   /**
    * A list of discount offers.
-   * @return discountoffers
+   * @return DiscountOffers
    **/
   @Schema(description = "A list of discount offers.")
       @Valid
-    public List<Discountoffers> getDiscountoffers() {
-    return discountoffers;
+    public List<DiscountOffers> getDiscountOffers() {
+    return DiscountOffers;
   }
 
-  public void setDiscountoffers(List<Discountoffers> discountoffers) {
-    this.discountoffers = discountoffers;
+  public void setDiscountOffers(List<DiscountOffers> DiscountOffers) {
+    this.DiscountOffers = DiscountOffers;
   }
 
 
@@ -162,13 +162,13 @@ public class BundleOffer   {
     return Objects.equals(this.bundleId, bundleOffer.bundleId) &&
         Objects.equals(this.name, bundleOffer.name) &&
         Objects.equals(this.packageId, bundleOffer.packageId) &&
-        Objects.equals(this.chargeoffers, bundleOffer.chargeoffers) &&
-        Objects.equals(this.discountoffers, bundleOffer.discountoffers);
+        Objects.equals(this.ChargeOffers, bundleOffer.ChargeOffers) &&
+        Objects.equals(this.DiscountOffers, bundleOffer.DiscountOffers);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bundleId, name, packageId, chargeoffers, discountoffers);
+    return Objects.hash(bundleId, name, packageId, ChargeOffers, DiscountOffers);
   }
 
   @Override
@@ -179,8 +179,8 @@ public class BundleOffer   {
     sb.append("    bundleId: ").append(toIndentedString(bundleId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    packageId: ").append(toIndentedString(packageId)).append("\n");
-    sb.append("    chargeoffers: ").append(toIndentedString(chargeoffers)).append("\n");
-    sb.append("    discountoffers: ").append(toIndentedString(discountoffers)).append("\n");
+    sb.append("    ChargeOffers: ").append(toIndentedString(ChargeOffers)).append("\n");
+    sb.append("    DiscountOffers: ").append(toIndentedString(DiscountOffers)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -3,8 +3,8 @@ package io.swagger.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.model.Chargeoffers;
-import io.swagger.model.Discountoffers;
+import io.swagger.model.ChargeOffers;
+import io.swagger.model.DiscountOffers;
 import io.swagger.model.ResourceRef;
 import io.swagger.model.Service;
 import io.swagger.model.SubscriptionTerms;
@@ -54,11 +54,11 @@ public class Bundle   {
 
   @JsonProperty("chargeoffers")
   @Valid
-  private List<Chargeoffers> chargeoffers = null;
+  private List<ChargeOffers> chargeoffers = null;
 
   @JsonProperty("discountoffers")
   @Valid
-  private List<Discountoffers> discountoffers = null;
+  private List<DiscountOffers> discountoffers = null;
 
   @JsonProperty("subscriptionTerms")
   private SubscriptionTerms subscriptionTerms = null;
@@ -241,14 +241,14 @@ public class Bundle   {
     this.ref = ref;
   }
 
-  public Bundle chargeoffers(List<Chargeoffers> chargeoffers) {
+  public Bundle chargeoffers(List<ChargeOffers> chargeoffers) {
     this.chargeoffers = chargeoffers;
     return this;
   }
 
-  public Bundle addChargeoffersItem(Chargeoffers chargeoffersItem) {
+  public Bundle addChargeoffersItem(ChargeOffers chargeoffersItem) {
     if (this.chargeoffers == null) {
-      this.chargeoffers = new ArrayList<Chargeoffers>();
+      this.chargeoffers = new ArrayList<ChargeOffers>();
     }
     this.chargeoffers.add(chargeoffersItem);
     return this;
@@ -260,22 +260,22 @@ public class Bundle   {
    **/
   @Schema(description = "The list of charge offers in the bundle.")
       @Valid
-    public List<Chargeoffers> getChargeoffers() {
+    public List<ChargeOffers> getChargeoffers() {
     return chargeoffers;
   }
 
-  public void setChargeoffers(List<Chargeoffers> chargeoffers) {
+  public void setChargeoffers(List<ChargeOffers> chargeoffers) {
     this.chargeoffers = chargeoffers;
   }
 
-  public Bundle discountoffers(List<Discountoffers> discountoffers) {
+  public Bundle discountoffers(List<DiscountOffers> discountoffers) {
     this.discountoffers = discountoffers;
     return this;
   }
 
-  public Bundle addDiscountoffersItem(Discountoffers discountoffersItem) {
+  public Bundle addDiscountoffersItem(DiscountOffers discountoffersItem) {
     if (this.discountoffers == null) {
-      this.discountoffers = new ArrayList<Discountoffers>();
+      this.discountoffers = new ArrayList<DiscountOffers>();
     }
     this.discountoffers.add(discountoffersItem);
     return this;
@@ -287,11 +287,11 @@ public class Bundle   {
    **/
   @Schema(description = "The list of discount offers in the bundle.")
       @Valid
-    public List<Discountoffers> getDiscountoffers() {
+    public List<DiscountOffers> getDiscountoffers() {
     return discountoffers;
   }
 
-  public void setDiscountoffers(List<Discountoffers> discountoffers) {
+  public void setDiscountoffers(List<DiscountOffers> discountoffers) {
     this.discountoffers = discountoffers;
   }
 
